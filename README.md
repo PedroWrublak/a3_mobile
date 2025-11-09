@@ -1,4 +1,6 @@
 # A3 Mobile – ToDo App
+Aplicativo Flutter desenvolvido para a disciplina de A3.  
+O objetivo do app é permitir o gerenciamento de tarefas pessoais, promovendo **organização e produtividade**, alinhado ao ODS 3 (Saúde e Bem-Estar).
 
 ## Colaboradores
 - Pedro Vinicius Wrublak - 10724263009
@@ -6,10 +8,6 @@
 - Nicolas Evertom Duarte da Silva - 10724263203
 - Guilherme Custodio Capote - 10724269158
 - Andrey Wesley Bastos de Sa - 10724268990
-
-
-Aplicativo Flutter desenvolvido para a disciplina de A3.  
-O objetivo do app é permitir o gerenciamento de tarefas pessoais, promovendo **organização e produtividade**, alinhado ao ODS 3 (Saúde e Bem-Estar).
 
 ## 📱 Funcionalidades
 - Listagem de tarefas ativas
