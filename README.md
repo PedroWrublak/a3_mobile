@@ -1,16 +1,27 @@
-# a3_mobile
+# A3 Mobile – ToDo App
 
-A new Flutter project.
+## Colaboradores
+- Pedro Vinicius Wrublak - 10724263009
+- Allex Maia - 10724261257
+- Nicolas Evertom Duarte da Silva - 10724263203
+- Guilherme Custodio Capote - 10724269158
+- Andrey Wesley Bastos de Sa - 10724268990
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Aplicativo Flutter desenvolvido para a disciplina de A3.  
+O objetivo do app é permitir o gerenciamento de tarefas pessoais, promovendo **organização e produtividade**, alinhado ao ODS 3 (Saúde e Bem-Estar).
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Funcionalidades
+- Listagem de tarefas ativas
+- Criação de novas tarefas
+- Visualização de tarefas concluídas
+- Tela "Sobre" com informações do app e equipe
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Tecnologias utilizadas
+- Flutter
+- Dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Como executar o projeto
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/PedroWrublak/a3_mobile.git
