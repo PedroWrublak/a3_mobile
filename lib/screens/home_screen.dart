@@ -11,13 +11,28 @@ class HomeScreen extends StatelessWidget {
     final controller = Provider.of<TaskController>(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Tarefas Ativas')),
+      backgroundColor: const Color(0xFFFFF8DC),
+      appBar: AppBar(
+        title: const Text(
+          'Bloco de Notas',
+          style: TextStyle(
+            color: Color(0xFF6D4C41),
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Cursive',
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color(0xFFFFE082),
+        elevation: 3,
+        iconTheme: const IconThemeData(color: Color(0xFF6D4C41)),
+      ),
+      
       drawer: Drawer(
         child: ListView(
           children: [
             const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.indigo),
-              child: Text('Organiza+', style: TextStyle(color: Colors.white, fontSize: 22)),
+              decoration: BoxDecoration(color: Color(0xFFFFE082)),
+              child: Text('To do App', style: TextStyle(color: Color(0xFF6D4C41), fontSize: 22)),
             ),
             ListTile(
               leading: const Icon(Icons.done),
@@ -43,37 +58,11 @@ class HomeScreen extends StatelessWidget {
               },
             ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xFFFFE082),
         onPressed: () => Navigator.pushNamed(context, '/new'),
         child: const Icon(Icons.add),
       ),
     );
   }
 
-  Drawer _buildDrawer(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(color: Colors.indigo),
-            child: Text('Organiza+', style: TextStyle(color: Colors.white, fontSize: 22)),
-          ),
-          ListTile(
-            leading: const Icon(Icons.home),
-            title: const Text('Home'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/new'),
-          ),
-          ListTile(
-            leading: const Icon(Icons.done),
-            title: const Text('Completed'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/completed'),
-          ),
-          ListTile(
-            leading: const Icon(Icons.info),
-            title: const Text('About'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/about'),
-          ),
-        ],
-      ),
-    );
-  }
 }

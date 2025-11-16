@@ -11,13 +11,27 @@ class CompletedScreen extends StatelessWidget {
     final controller = Provider.of<TaskController>(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Tarefas Concluídas')),
+      backgroundColor: const Color(0xFFFFF8DC),
+      appBar: AppBar(
+        title: const Text(
+          'Tarefas Concluídas',
+          style: TextStyle(
+            color: Color(0xFF6D4C41),
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Cursive',
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color(0xFFFFE082),
+        elevation: 3,
+        iconTheme: const IconThemeData(color: Color(0xFF6D4C41)),
+      ),
       drawer: Drawer(
         child: ListView(
           children: [
             const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.indigo),
-              child: Text('Organiza+', style: TextStyle(color: Colors.white, fontSize: 22)),
+              decoration: BoxDecoration(color: Color(0xFFFFE082)),
+              child: Text('To Do App', style: TextStyle(color: Color(0xFF6D4C41), fontSize: 22)),
             ),
             ListTile(
               leading: const Icon(Icons.home),

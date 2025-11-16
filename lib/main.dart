@@ -19,7 +19,7 @@ class ToDoApp extends StatelessWidget {
       create: (_) => TaskController(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Organiza+',
+        title: 'To do App',
         theme: ThemeData(primarySwatch: Colors.indigo),
         initialRoute: '/',
         routes: {

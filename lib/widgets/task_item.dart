@@ -14,6 +14,7 @@ class TaskItem extends StatelessWidget {
     final controller = Provider.of<TaskController>(context, listen: false);
 
     return Card(
+      color: const Color.fromARGB(255, 236, 227, 192),
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       child: ListTile(
         title: Text(task.title),
@@ -28,7 +29,7 @@ class TaskItem extends StatelessWidget {
               ),
             IconButton(
               icon: const Icon(Icons.delete, color: Colors.red),
-              onPressed: () => controller.excluir(task.id),
+              onPressed: () => controller.deleteTask(task.id),
             ),
           ],
         ),

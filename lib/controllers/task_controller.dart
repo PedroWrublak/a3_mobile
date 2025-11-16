@@ -10,12 +10,12 @@ class TaskController extends ChangeNotifier {
   List<Task> get completedTasks =>
       _tasks.where((t) => t.completed).toList();
 
-  void adicionar(Task task) {
+  void addTask(Task task) {
     _tasks.add(task);
     notifyListeners();
   }
 
-  void atualizar(Task task) {
+  void updateTask(Task task) {
     final index = _tasks.indexWhere((t) => t.id == task.id);
     if (index != -1) {
       _tasks[index] = task;
@@ -23,7 +23,7 @@ class TaskController extends ChangeNotifier {
     }
   }
 
-  void excluir(int id) {
+  void deleteTask(int id) {
     _tasks.removeWhere((t) => t.id == id);
     notifyListeners();
   }

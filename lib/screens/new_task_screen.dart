@@ -57,7 +57,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                       description: _description,
                       category: _category,
                     );
-                    controller.adicionar(newTask);
+                    controller.addTask(newTask);
                     Navigator.pop(context);
                   }
                 },

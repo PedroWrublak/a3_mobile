@@ -6,14 +6,28 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('About')),
+      backgroundColor: const Color(0xFFFFF8DC),
+      appBar: AppBar(
+        title: const Text(
+          'Sobre o App',
+          style: TextStyle(
+            color: Color(0xFF6D4C41),
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Cursive',
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color(0xFFFFE082),
+        elevation: 3,
+        iconTheme: const IconThemeData(color: Color(0xFF6D4C41)),
+      ),
       drawer: Drawer(
         child: ListView(
           children: [
             const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.indigo),
+              decoration: BoxDecoration(color: Color(0xFFFFE082)),
               child: Text(
-                'Organiza+',
+                'To do App',
                 style: TextStyle(color: Colors.white, fontSize: 22),
               ),
             ),
@@ -36,10 +50,6 @@ class AboutScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'To do App',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
             SizedBox(height: 10),
             Text(
               'Aplicativo desenvolvido para ajudar na organização pessoal e profissional, promovendo o bem-estar e produtividade (ODS 3 e 8).',
