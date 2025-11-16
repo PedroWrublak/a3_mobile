@@ -31,7 +31,10 @@ class CompletedScreen extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(color: Color(0xFFFFE082)),
-              child: Text('To Do App', style: TextStyle(color: Color(0xFF6D4C41), fontSize: 22)),
+              child: Text(
+                'To Do App',
+                style: TextStyle(color: Color(0xFF6D4C41), fontSize: 22),
+              ),
             ),
             ListTile(
               leading: const Icon(Icons.home),
@@ -42,6 +45,11 @@ class CompletedScreen extends StatelessWidget {
               leading: const Icon(Icons.info),
               title: const Text('About'),
               onTap: () => Navigator.pushReplacementNamed(context, '/about'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.category),
+              title: const Text('Categorias'),
+              onTap: () => Navigator.pushNamed(context, '/categories'),
             ),
           ],
         ),

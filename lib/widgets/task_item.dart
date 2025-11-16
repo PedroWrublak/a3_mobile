@@ -14,7 +14,7 @@ class TaskItem extends StatelessWidget {
     final controller = Provider.of<TaskController>(context, listen: false);
 
     return Card(
-      color: const Color.fromARGB(255, 236, 227, 192),
+      color: const Color(0xFFECE3C0),
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       child: ListTile(
         title: Text(task.title),

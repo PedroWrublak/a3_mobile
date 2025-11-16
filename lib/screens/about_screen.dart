@@ -42,6 +42,11 @@ class AboutScreen extends StatelessWidget {
               onTap: () =>
                   Navigator.pushReplacementNamed(context, '/completed'),
             ),
+            ListTile(
+              leading: const Icon(Icons.category),
+              title: const Text('Categorias'),
+              onTap: () => Navigator.pushNamed(context, '/categories'),
+            ),
           ],
         ),
       ),
@@ -55,8 +60,10 @@ class AboutScreen extends StatelessWidget {
               'Aplicativo desenvolvido para ajudar na organização pessoal e profissional, promovendo o bem-estar e produtividade (ODS 3 e 8).',
             ),
             SizedBox(height: 20),
-            Text('Desenvolvido por: Pedro Vinicius Wrublak, Allex Maia, Nicolas Evertom Duarte da Silva, Guilherme Custodio Capote e Andrey Wesley Bastos de Sa'),
-            Text('Versão: 1.0'),
+            Text(
+              'Desenvolvido por: Pedro Vinicius Wrublak, Allex Maia, Nicolas Evertom Duarte da Silva, Guilherme Custodio Capote e Andrey Wesley Bastos de Sa',
+            ),
+            Text('Versão: 1.2'),
           ],
         ),
       ),

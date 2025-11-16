@@ -21,7 +21,21 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
     final controller = Provider.of<TaskController>(context, listen: false);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Nova Tarefa')),
+      backgroundColor: const Color(0xFFFFF8DC),
+      appBar: AppBar(
+        title: const Text(
+          'Nova Tarefa',
+          style: TextStyle(
+            color: Color(0xFF6D4C41),
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Cursive',
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color(0xFFFFE082),
+        elevation: 3,
+        iconTheme: const IconThemeData(color: Color(0xFF6D4C41)),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Form(
@@ -29,25 +43,29 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
           child: Column(
             children: [
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Title'),
+                decoration: const InputDecoration(labelText: 'Título'),
                 validator: (value) =>
                     value!.isEmpty ? 'Informe um título' : null,
                 onSaved: (value) => _title = value!,
               ),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Description'),
+                decoration: const InputDecoration(labelText: 'Descrição'),
                 onSaved: (value) => _description = value ?? '',
               ),
               DropdownButtonFormField<String>(
-                value: _category,
+                initialValue: _category,
                 items: ['Pessoal', 'Trabalho', 'Estudo']
                     .map((e) => DropdownMenuItem(value: e, child: Text(e)))
                     .toList(),
                 onChanged: (v) => _category = v!,
-                decoration: const InputDecoration(labelText: 'Category'),
+                decoration: const InputDecoration(labelText: 'Categoria'),
               ),
               const SizedBox(height: 20),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFFFE082),
+                  foregroundColor: const Color(0xFF6D4C41),
+                ),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();

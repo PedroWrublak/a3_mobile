@@ -26,13 +26,16 @@ class HomeScreen extends StatelessWidget {
         elevation: 3,
         iconTheme: const IconThemeData(color: Color(0xFF6D4C41)),
       ),
-      
+
       drawer: Drawer(
         child: ListView(
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(color: Color(0xFFFFE082)),
-              child: Text('To do App', style: TextStyle(color: Color(0xFF6D4C41), fontSize: 22)),
+              child: Text(
+                'To do App',
+                style: TextStyle(color: Color(0xFF6D4C41), fontSize: 22),
+              ),
             ),
             ListTile(
               leading: const Icon(Icons.done),
@@ -44,6 +47,11 @@ class HomeScreen extends StatelessWidget {
               leading: const Icon(Icons.info),
               title: const Text('About'),
               onTap: () => Navigator.pushReplacementNamed(context, '/about'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.category),
+              title: const Text('Categorias'),
+              onTap: () => Navigator.pushNamed(context, '/categories'),
             ),
           ],
         ),
@@ -64,5 +72,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
 }

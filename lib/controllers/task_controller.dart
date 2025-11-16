@@ -10,6 +10,10 @@ class TaskController extends ChangeNotifier {
   List<Task> get completedTasks =>
       _tasks.where((t) => t.completed).toList();
 
+  List<Task> getTasksByCategory(String category) {
+  return _tasks.where((t) => t.category == category && !t.completed).toList();
+  }
+
   void addTask(Task task) {
     _tasks.add(task);
     notifyListeners();
