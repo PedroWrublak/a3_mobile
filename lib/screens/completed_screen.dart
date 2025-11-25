@@ -43,7 +43,7 @@ class CompletedScreen extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.info),
-              title: const Text('About'),
+              title: const Text('Sobre'),
               onTap: () => Navigator.pushReplacementNamed(context, '/about'),
             ),
             ListTile(
